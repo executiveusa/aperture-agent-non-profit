@@ -1,0 +1,24 @@
+{
+  "name": "aperture",
+  "private": true,
+  "version": "1.0.0",
+  "description": "APERTURE Hermes domain agent monorepo",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --parallel --filter @aperture/api --filter @aperture/worker --filter @aperture/web dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "format": "pnpm -r format",
+    "seed": "pnpm --filter @aperture/api seed",
+    "db:migrate": "pnpm --filter @aperture/api db:migrate",
+    "e2e": "pnpm --filter @aperture/evals e2e"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  }
+}

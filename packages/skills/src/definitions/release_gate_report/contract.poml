@@ -1,0 +1,6 @@
+<skill name="release_gate_report" version="1.0.0">
+  <phase>execute</phase>
+  <phase>verify</phase>
+  <phase>capture_evidence</phase>
+  <phase>report</phase>
+</skill>

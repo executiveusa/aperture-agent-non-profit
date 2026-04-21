@@ -1,0 +1,25 @@
+{
+  "name": "@aperture/worker",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/worker.js",
+  "types": "dist/worker.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/worker.ts",
+    "start": "node dist/worker.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo 'lint worker ok'",
+    "test": "node --test src/worker.test.ts",
+    "format": "echo 'format worker'"
+  },
+  "dependencies": {
+    "@aperture/agent-core": "workspace:*",
+    "bullmq": "^5.17.0",
+    "ioredis": "^5.4.1",
+    "pino": "^9.5.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@aperture/shared",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo 'lint shared ok'",
+    "test": "node --test src/contracts.test.ts",
+    "format": "echo 'format shared'"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

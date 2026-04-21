@@ -1,0 +1,17 @@
+{
+  "name": "@aperture/skills",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo 'lint skills ok'",
+    "test": "node --test src/skills.test.ts",
+    "format": "echo 'format skills'"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

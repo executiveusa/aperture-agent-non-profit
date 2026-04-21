@@ -1,0 +1,23 @@
+{
+  "name": "@aperture/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "echo 'lint web ok'",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test src/web.test.ts",
+    "format": "echo 'format web'"
+  },
+  "dependencies": {
+    "next": "15.0.1",
+    "react": "19.0.0-rc-65a56d0e-20241020",
+    "react-dom": "19.0.0-rc-65a56d0e-20241020"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  }
+}

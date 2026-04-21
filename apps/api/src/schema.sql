@@ -1,0 +1,12 @@
+create table if not exists environments (id text primary key, name text not null, profile text not null, base_url text not null, allow_destructive_actions boolean not null default false);
+create table if not exists skills (id text primary key, name text not null, version text not null, enabled boolean not null default true);
+create table if not exists jobs (id text primary key, environment_id text not null references environments(id), skill_key text not null, name text not null, active boolean not null default true);
+create table if not exists schedules (id text primary key, job_id text not null references jobs(id), cron text not null, timezone text not null default 'UTC', active boolean not null default true);
+create table if not exists runs (id text primary key, job_id text not null references jobs(id), status text not null, verdict text, started_at timestamptz, finished_at timestamptz);
+create table if not exists run_steps (id text primary key, run_id text not null references runs(id), step_index int not null, phase text not null, status text not null, notes text);
+create table if not exists evidence_items (id text primary key, run_id text not null references runs(id), kind text not null, path text not null, metadata jsonb not null default '{}');
+create table if not exists issues (id text primary key, run_id text references runs(id), title text not null, status text not null, summary text not null);
+create table if not exists approvals (id text primary key, run_id text references runs(id), action text not null, status text not null, decided_at timestamptz);
+create table if not exists settings (id text primary key, key text unique not null, value jsonb not null default '{}');
+create table if not exists baselines (id text primary key, environment_id text not null references environments(id), name text not null, image_path text not null, promoted_at timestamptz);
+create table if not exists eval_runs (id text primary key, suite text not null, status text not null, score int not null, created_at timestamptz not null default now());
