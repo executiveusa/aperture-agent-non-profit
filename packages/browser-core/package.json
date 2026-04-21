@@ -1,0 +1,17 @@
+{
+  "name": "@aperture/browser-core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo 'lint browser-core ok'",
+    "test": "node --test src/browser.test.ts",
+    "format": "echo 'format browser-core'"
+  },
+  "dependencies": {
+    "@aperture/shared": "workspace:*"
+  }
+}

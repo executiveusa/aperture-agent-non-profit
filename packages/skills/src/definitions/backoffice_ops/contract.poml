@@ -1,0 +1,6 @@
+<skill name="backoffice_ops" version="1.0.0">
+  <phase>execute</phase>
+  <phase>verify</phase>
+  <phase>capture_evidence</phase>
+  <phase>report</phase>
+</skill>

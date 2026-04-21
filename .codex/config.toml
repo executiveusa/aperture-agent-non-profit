@@ -1,0 +1,33 @@
+[project]
+name = "APERTURE"
+
+[rules]
+inspect_before_edit = true
+run_lint = true
+run_typecheck = true
+run_tests = true
+self_review_diff = true
+
+[docs]
+prefer_context7 = true
+prefer_openai_docs_mcp = true
+
+[retrieval]
+jcodemunch_optional = true
+fallback = "local-files"
+
+[commands]
+dev = "pnpm dev"
+lint = "pnpm lint"
+typecheck = "pnpm typecheck"
+test = "pnpm test"
+e2e = "pnpm e2e"
+seed = "pnpm seed"
+
+[done_when]
+criteria = [
+  "all mission control actions backed by real endpoints",
+  "worker captures run evidence artifacts",
+  "seeded demo jobs and baseline present",
+  "docker compose deployable on Coolify"
+]
