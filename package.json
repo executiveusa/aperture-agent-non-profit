@@ -16,9 +16,9 @@
     "e2e": "pnpm --filter @aperture/evals e2e"
   },
   "devDependencies": {
-    "@types/node": "^22.8.6",
-    "eslint": "^9.14.0",
+    "@types/node": "^26.5.1",
+    "eslint": "^10.10.0",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "typescript": "^7.0.2"
   }
 }
