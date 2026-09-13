@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@aperture/agent-core": "workspace:*",
-    "bullmq": "^5.17.0",
-    "ioredis": "^5.4.1",
-    "pino": "^9.5.0"
+    "bullmq": "^6.3.4",
+    "ioredis": "^6.0.0",
+    "pino": "^10.3.1"
   },
   "devDependencies": {
     "tsx": "^4.19.1"
